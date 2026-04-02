@@ -327,19 +327,93 @@ footer {
   border-color: var(--mid);
 }
 
+
+/* ─── HAMBURGER MENU ─── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--dark);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hamburger Animation into an 'X' */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
   :root { --page-padding: 24px; }
+  
   .hero img { height: 260px; }
+  
+  /* Header flex adjustments to allow nav to drop down */
+  header {
+    flex-wrap: wrap;
+  }
+  
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+  
+  /* Hide nav by default, style it for mobile */
+  nav {
+    display: none; 
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding-top: 24px;
+    padding-bottom: 8px;
+  }
+  
+  /* Show nav when active */
+  nav.active {
+    display: flex;
+  }
+  
+  /* Make mobile links a bit larger for easier tapping */
+  nav a {
+    font-size: 1rem;
+  }
+
+  /* Force 2 columns for both artwork grids */
   .grid,
-  .work-grid { grid-template-columns: repeat(2, 1fr); }
+  .work-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  
   .grid-item img,
-  .work-grid a img { height: 150px; }
+  .work-grid a img { 
+    height: 150px; 
+  }
 }
 
 @media (max-width: 480px) {
-  nav { gap: 14px; }
-  nav a { font-size: 0.75rem; }
   .grid,
-  .work-grid { grid-template-columns: 1fr 1fr; }
+  .work-grid { 
+    grid-template-columns: repeat(2, 1fr); /* Maintains 2 columns on very small screens */
+  }
 }
