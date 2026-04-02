@@ -1,0 +1,345 @@
+/* ─── RESET & BASE ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --off-white: #f9f7f5;
+  --dark: #1a1a1a;
+  --mid: #888;
+  --light: #ccc;
+  --page-padding: 72px;   /* left/right margin — change this one value to adjust */
+  --nav-font: 'Jost', sans-serif;
+  --body-font: 'Cormorant Garamond', serif;
+}
+
+html, body {
+  background-color: var(--off-white);
+  color: var(--dark);
+  font-family: var(--nav-font);
+  font-weight: 300;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ─── HEADER / NAV ─── */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px var(--page-padding);
+  background: var(--off-white);
+}
+
+.site-name {
+  font-family: var(--nav-font);
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--dark);
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav a {
+  font-family: var(--nav-font);
+  font-weight: 300;
+  font-size: 0.82rem;
+  letter-spacing: 0.07em;
+  text-decoration: none;
+  color: var(--dark);
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--mid);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  padding: 24px var(--page-padding);
+  font-size: 0.75rem;
+  color: var(--light);
+  letter-spacing: 0.05em;
+}
+
+/* ─── HERO ─── */
+.hero {
+  padding: 0 var(--page-padding) 10px;
+}
+
+.hero img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ─── HOME GRID ─── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 0 var(--page-padding) 40px;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 195px;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.35s ease;
+}
+
+.grid-item:hover img {
+  filter: brightness(0.35) grayscale(0.3);
+}
+
+.grid-item .overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.grid-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay span {
+  font-family: var(--body-font);
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #fff;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 0 12px;
+}
+
+/* ─── INNER PAGE LAYOUT ─── */
+.page-content {
+  padding: 48px var(--page-padding) 64px;
+  max-width: 860px;
+}
+
+.page-content h1 {
+  font-family: var(--body-font);
+  font-weight: 300;
+  font-size: 2.2rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 28px;
+}
+
+.page-content p {
+  font-family: var(--body-font);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* ─── WORK LIST PAGE ─── */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 48px var(--page-padding) 64px;
+}
+
+.work-grid a {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+}
+
+.work-grid a img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.35s ease;
+}
+
+.work-grid a:hover img {
+  filter: brightness(0.35) grayscale(0.3);
+}
+
+.work-grid a .overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.work-grid a:hover .overlay {
+  opacity: 1;
+}
+
+/* ─── ARTWORK DETAIL PAGE ─── */
+.artwork-detail {
+  padding: 48px var(--page-padding) 64px;
+}
+
+.artwork-detail h1 {
+  font-family: var(--body-font);
+  font-weight: 300;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 28px;
+}
+
+.artwork-detail img {
+  width: 100%;
+  max-width: 760px;
+  display: block;
+  margin-bottom: 28px;
+}
+
+.artwork-detail p {
+  font-family: var(--body-font);
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: #444;
+  max-width: 620px;
+  margin-bottom: 16px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 32px;
+  font-family: var(--nav-font);
+  font-size: 0.8rem;
+  letter-spacing: 0.07em;
+  color: var(--mid);
+  text-decoration: none;
+  border-bottom: 1px solid var(--light);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--dark);
+  border-color: var(--mid);
+}
+
+/* ─── EXHIBITIONS / WORKSHOPS LIST ─── */
+.item-list {
+  padding: 48px var(--page-padding) 64px;
+}
+
+.item-list h1 {
+  font-family: var(--body-font);
+  font-weight: 300;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.item-list .entry {
+  border-top: 1px solid var(--light);
+  padding: 24px 0;
+}
+
+.item-list .entry:last-child {
+  border-bottom: 1px solid var(--light);
+}
+
+.item-list .entry h2 {
+  font-family: var(--body-font);
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+}
+
+.item-list .entry .meta {
+  font-size: 0.78rem;
+  letter-spacing: 0.07em;
+  color: var(--mid);
+  margin-bottom: 10px;
+}
+
+.item-list .entry p {
+  font-family: var(--body-font);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #555;
+  max-width: 620px;
+}
+
+/* ─── CONTACT ─── */
+.contact-block {
+  padding: 48px var(--page-padding) 64px;
+}
+
+.contact-block h1 {
+  font-family: var(--body-font);
+  font-weight: 300;
+  font-size: 2.2rem;
+  margin-bottom: 28px;
+}
+
+.contact-block p {
+  font-family: var(--body-font);
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: #444;
+  max-width: 480px;
+  margin-bottom: 16px;
+}
+
+.contact-block a {
+  color: var(--dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--light);
+  transition: border-color 0.2s;
+}
+
+.contact-block a:hover {
+  border-color: var(--mid);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  :root { --page-padding: 24px; }
+  .hero img { height: 260px; }
+  .grid,
+  .work-grid { grid-template-columns: repeat(2, 1fr); }
+  .grid-item img,
+  .work-grid a img { height: 150px; }
+}
+
+@media (max-width: 480px) {
+  nav { gap: 14px; }
+  nav a { font-size: 0.75rem; }
+  .grid,
+  .work-grid { grid-template-columns: 1fr 1fr; }
+}
