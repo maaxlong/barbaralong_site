@@ -34,3 +34,7 @@ title = "Barbara Long"
   name = "Blog"
   url = "/posts/"
   weight = 6
+
+[caches]
+[caches.images]
+	dir = ':cacheDir/images'
