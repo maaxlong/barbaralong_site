@@ -18,4 +18,4 @@ gallery:
 
 ---
 
-This is an example of a sample artwork. This is an example of a sample artwork. This is an example of a sample artwork. This is an example of a sample artwork. This is an example of a sample artwork. This is an example of a sample artwork
+This is an example of a sample artwork. This is an example of a sample artwork. This is an example of a sample artwork. This is an example of a sample artwork. This is an example of a sample artwork. This is an example of a sample artwork. Test. 
