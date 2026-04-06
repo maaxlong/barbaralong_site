@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Work on Barbara Long</title>
+    <link>http://localhost:1313/work/</link>
+    <description>Recent content in Work on Barbara Long</description>
+    <generator>Hugo</generator>
+    <language>en-GB</language>
+    <atom:link href="http://localhost:1313/work/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Artwork Title 1</title>
+      <link>http://localhost:1313/work/artwork-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/work/artwork-1/</guid>
+      <description>&lt;p&gt;A description of this work — the materials, process, and ideas behind it. Replace this with your own writing about the piece.&lt;/p&gt;&#xA;&lt;p&gt;Additional details: dimensions, year made, whether it is for sale or has been exhibited.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sample Artwork</title>
+      <link>http://localhost:1313/work/sample-artwork/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/work/sample-artwork/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Artwork Title 2</title>
+      <link>http://localhost:1313/work/artwork-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/work/artwork-2/</guid>
+      <description>&lt;p&gt;A description of this work — the materials, process, and ideas behind it. Replace this with your own writing about the piece.&lt;/p&gt;&#xA;&lt;p&gt;Additional details: dimensions, year made, whether it is for sale or has been exhibited.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Artwork Title 3</title>
+      <link>http://localhost:1313/work/artwork-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/work/artwork-3/</guid>
+      <description>&lt;p&gt;A description of this work — the materials, process, and ideas behind it. Replace this with your own writing about the piece.&lt;/p&gt;&#xA;&lt;p&gt;Additional details: dimensions, year made, whether it is for sale or has been exhibited.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Artwork Title 4</title>
+      <link>http://localhost:1313/work/artwork-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/work/artwork-4/</guid>
+      <description>&lt;p&gt;A description of this work — the materials, process, and ideas behind it. Replace this with your own writing about the piece.&lt;/p&gt;&#xA;&lt;p&gt;Additional details: dimensions, year made, whether it is for sale or has been exhibited.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Artwork Title 5</title>
+      <link>http://localhost:1313/work/artwork-5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/work/artwork-5/</guid>
+      <description>&lt;p&gt;A description of this work — the materials, process, and ideas behind it. Replace this with your own writing about the piece.&lt;/p&gt;&#xA;&lt;p&gt;Additional details: dimensions, year made, whether it is for sale or has been exhibited.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Artwork Title 6</title>
+      <link>http://localhost:1313/work/artwork-6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/work/artwork-6/</guid>
+      <description>&lt;p&gt;A description of this work — the materials, process, and ideas behind it. Replace this with your own writing about the piece.&lt;/p&gt;&#xA;&lt;p&gt;Additional details: dimensions, year made, whether it is for sale or has been exhibited.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Barbara Long</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Blog on Barbara Long</description>
+    <generator>Hugo</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Fri, 03 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New work for spring</title>
+      <link>http://localhost:1313/posts/2026-04-03-new-work-for-spring/</link>
+      <pubDate>Fri, 03 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-03-new-work-for-spring/</guid>
+      <description>&lt;p&gt;Some thoughts on the new pieces I&amp;rsquo;ve been making this spring. Replace this with your own writing — it can be as long or short as you like.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

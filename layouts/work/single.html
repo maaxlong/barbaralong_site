@@ -1,0 +1,74 @@
+{{ define "main" }}
+<div class="artwork-detail">
+  <h1>{{ .Title }}</h1>
+  
+  <div class="artwork-container">
+    <div class="artwork-main-image">
+      <img src="/images/{{ .Params.image }}" alt="{{ .Title }}" class="main-artwork-img" />
+    </div>
+    
+    <div class="artwork-description">
+      {{ .Content }}
+    </div>
+  </div>
+
+  {{ if .Params.gallery }}
+    {{ $count := len .Params.gallery }}
+    <div class="gallery-grid count-{{ $count }}">
+      {{ range $index, $item := .Params.gallery }}
+      <div class="gallery-item">
+        <img src="/images/{{ $item.src }}" 
+             alt="{{ $item.caption }}" 
+             class="thumb" 
+             data-index="{{ add $index 1 }}">
+      </div>
+      {{ end }}
+    </div>
+
+    <div id="lightbox" class="modal">
+      <span class="close">&times;</span>
+      <div class="modal-content">
+        {{ range $index, $item := .Params.gallery }}
+        <div class="slide">
+          <div class="numbertext">{{ add $index 1 }} / {{ $count }}</div>
+          <img src="/images/{{ $item.src }}" alt="{{ $item.caption }}">
+          <div class="caption-container">
+            <p>{{ $item.caption }}</p>
+          </div>
+        </div>
+        {{ end }}
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+      </div>
+    </div>
+
+    <script>
+      const modal = document.getElementById("lightbox");
+      const slides = document.getElementsByClassName("slide");
+      let slideIndex = 1;
+
+      document.querySelectorAll('.thumb').forEach(img => {
+        img.onclick = () => {
+          modal.style.display = "block";
+          showSlide(slideIndex = parseInt(img.dataset.index));
+        }
+      });
+
+      document.querySelector('.close').onclick = () => modal.style.display = "none";
+      window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
+
+      document.querySelector('.prev').onclick = () => showSlide(slideIndex -= 1);
+      document.querySelector('.next').onclick = () => showSlide(slideIndex += 1);
+
+      function showSlide(n) {
+        if (n > slides.length) slideIndex = 1;
+        if (n < 1) slideIndex = slides.length;
+        for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
+  {{ end }}
+
+  <a class="back-link" href="/work/">&larr; Back to Work</a>
+</div>
+{{ end }}

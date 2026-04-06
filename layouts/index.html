@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+  <section class="hero">
+    <img src="/images/hero.jpg" alt="Featured work by Barbara Long" />
+  </section>
+
+  <section class="grid">
+    {{ range where .Site.RegularPages "Section" "work" }}
+    <a class="grid-item" href="{{ .RelPermalink }}">
+      <img src="/images/{{ .Params.image }}" alt="{{ .Title }}" />
+      <div class="overlay"><span>{{ .Title }}</span></div>
+    </a>
+    {{ end }}
+  </section>
+
+{{ end }}

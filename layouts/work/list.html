@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <section class="work-grid">
+    {{ range .Pages }}
+    <a href="{{ .RelPermalink }}">
+      <img src="/images/{{ .Params.image }}" alt="{{ .Title }}" />
+      <div class="overlay"><span>{{ .Title }}</span></div>
+    </a>
+    {{ end }}
+  </section>
+{{ end }}
