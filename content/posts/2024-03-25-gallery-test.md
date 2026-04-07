@@ -11,6 +11,7 @@ gallery:
 ---
 
 I wanted to share some of the messier parts of my process that don't make it into the final portfolio.
+<!--more-->
 
 {{< blog_gallery >}}
 
