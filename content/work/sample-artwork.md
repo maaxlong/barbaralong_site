@@ -2,6 +2,7 @@
 title: "Sample Artwork"
 image: "hero.jpg"
 weight: 1
+featured: true
 gallery:
   - src: "grid-1.jpg"
     caption: "Detail of the brushwork"

@@ -4,13 +4,14 @@
     <img src="{{ "images/hero.jpg" | relURL }}" alt="Featured work by Barbara Long" />
   </section>
 
-  <section class="grid">
-    {{ range where .Site.RegularPages "Section" "work" }}
-    <a class="grid-item" href="{{ .RelPermalink }}">
-      <img src="{{ (printf "images/%s" .Params.image) | relURL }}" alt="{{ .Title }}" />
-      <div class="overlay"><span>{{ .Title }}</span></div>
-    </a>
-    {{ end }}
-  </section>
+	<section class="grid">
+  	{{/* This filters for pages in 'work' AND where 'featured' is set to true */}}
+  	{{ range where (where .Site.RegularPages "Section" "work") "Params.featured" "==" true }}
+   	 	<a class="grid-item" href="{{ .RelPermalink }}">
+     		<img src="{{ (printf "images/%s" .Params.image) | relURL }}" alt="{{ .Title }}" />
+      		<div class="overlay"><span>{{ .Title }}</span></div>
+   	 	</a>
+  	{{ end }}
+</section>
 
 {{ end }}

@@ -2,6 +2,7 @@
 title: "Artwork Title 5"
 image: "grid-5.jpg"
 weight: 5
+featured: true
 ---
 
 A description of this work — the materials, process, and ideas behind it. Replace this with your own writing about the piece.

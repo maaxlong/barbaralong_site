@@ -1,6 +1,7 @@
 ---
 title: "Artwork Title 1"
 image: "grid-1.jpg"
+featured: true
 weight: 1
 ---
 
