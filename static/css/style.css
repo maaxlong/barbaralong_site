@@ -210,7 +210,6 @@ footer {
 /* ─── ARTWORK DETAIL PAGE ─── */
 .artwork-detail {
   padding: 48px var(--page-padding) 64px;
-  /* Unifies max-width for title, container, and grid to ensure left-alignment */
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -229,7 +228,6 @@ footer {
   width: 100%;
   max-height: 500px;
   object-fit: contain;
-  /* Forces the image content to the left of its container */
   object-position: left center; 
   display: block;
   margin-bottom: 28px;
@@ -434,7 +432,6 @@ footer {
   grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
   gap: 12px;
   margin-top: 40px;
-  /* Max-width/Centering now handled by .artwork-detail parent */
   width: 100%;
 }
 
@@ -488,6 +485,16 @@ footer {
 
 .slide { display: none; }
 .slide img { max-height: 80vh; max-width: 100%; height: auto; }
+
+/* Styles the "1 / 5" counter text */
+.numbertext {
+  color: var(--mid);
+  font-size: 0.8rem;
+  font-family: var(--nav-font);
+  letter-spacing: 0.05em;
+  padding-top: 20px;    /* Adds the requested padding above */
+  padding-bottom: 10px;
+}
 
 .close {
   position: absolute;
