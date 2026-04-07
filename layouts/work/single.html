@@ -4,7 +4,9 @@
   
   <div class="artwork-container">
     <div class="artwork-main-image">
-      <img src="/images/{{ .Params.image }}" alt="{{ .Title }}" class="main-artwork-img" />
+      <img src="{{ "images/" | relURL }}{{ .Params.image }}" 
+           alt="{{ .Title }}" 
+           class="main-artwork-img" />
     </div>
     
     <div class="artwork-description">
@@ -17,7 +19,7 @@
     <div class="gallery-grid count-{{ $count }}">
       {{ range $index, $item := .Params.gallery }}
       <div class="gallery-item">
-        <img src="/images/{{ $item.src }}" 
+        <img src="{{ "images/" | relURL }}{{ $item.src }}" 
              alt="{{ $item.caption }}" 
              class="thumb" 
              data-index="{{ add $index 1 }}">
@@ -31,7 +33,8 @@
         {{ range $index, $item := .Params.gallery }}
         <div class="slide">
           <div class="numbertext">{{ add $index 1 }} / {{ $count }}</div>
-          <img src="/images/{{ $item.src }}" alt="{{ $item.caption }}">
+          <img src="{{ "images/" | relURL }}{{ $item.src }}" 
+               alt="{{ $item.caption }}">
           <div class="caption-container">
             <p>{{ $item.caption }}</p>
           </div>
@@ -69,6 +72,6 @@
     </script>
   {{ end }}
 
-  <a class="back-link" href="/work/">&larr; Back to Work</a>
+  <a class="back-link" href="{{ "work/" | relURL }}">&larr; Back to Work</a>
 </div>
 {{ end }}
