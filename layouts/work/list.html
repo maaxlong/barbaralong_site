@@ -2,7 +2,7 @@
   <section class="work-grid">
     {{ range .Pages }}
     <a href="{{ .RelPermalink }}">
-      <img src="/images/{{ .Params.image }}" alt="{{ .Title }}" />
+      <img src="{{ printf "images/%s" .Params.image | relURL }}" alt="{{ .Title }}" />
       <div class="overlay"><span>{{ .Title }}</span></div>
     </a>
     {{ end }}
