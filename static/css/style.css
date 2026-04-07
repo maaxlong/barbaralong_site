@@ -468,7 +468,7 @@ footer {
   z-index: 9999;
   left: 0; top: 0;
   width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.9);
+  background-color: var(--off-white); /* Match site background */
 }
 
 .modal-content {
@@ -476,7 +476,7 @@ footer {
   margin: auto;
   top: 50%;
   transform: translateY(-50%);
-  width: 90%;
+  width: 80%; /* Reduced width to leave space for arrows outside */
   max-width: 1100px;
   text-align: center;
 }
@@ -487,30 +487,45 @@ footer {
 .close {
   position: absolute;
   top: 20px; right: 35px;
-  color: white; font-size: 40px; font-weight: bold; cursor: pointer;
+  color: var(--dark); /* Changed from white to dark */
+  font-size: 40px; 
+  font-weight: 300; 
+  cursor: pointer;
 }
 
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%; width: auto;
-  padding: 20px; color: white;
-  font-weight: bold; font-size: 30px;
+  top: 50%; 
+  transform: translateY(-50%); /* Center arrows vertically */
+  width: auto;
+  padding: 20px; 
+  color: var(--dark); /* Set arrows to black */
+  font-weight: 300; 
+  font-size: 40px;
   user-select: none;
   text-decoration: none;
+  transition: color 0.2s;
 }
-.next { right: 0; }
-.prev { left: 0; }
+
+/* Position arrows in the gutters outside the content */
+.next { right: -80px; }
+.prev { left: -80px; }
+
+.prev:hover, .next:hover {
+  color: var(--mid);
+}
 
 .caption-container {
-  padding: 15px;
-  color: white;
+  padding: 15px 0;
+  color: var(--dark);
   font-family: var(--body-font);
   font-style: italic;
+  text-align: left; /* Always align text left relative to image */
 }
 
 .caption-container p {
-  color: #ffffff !important;
+  color: var(--dark) !important; /* Force text color visibility on light background */
 }
 
 /* Container for Image and Text */
@@ -539,6 +554,11 @@ footer {
 
 /* ─── RESPONSIVE FIX ─── */
 @media (max-width: 768px) {
+  /* Lightbox Mobile Adjustments */
+  .modal-content { width: 95%; }
+  .prev { left: 0; }
+  .next { right: 0; }
+
   .artwork-container {
     flex-direction: column; /* Stacks them on top of each other on mobile */
     gap: 20px;
@@ -549,9 +569,7 @@ footer {
     flex: none;
     width: 100%;
   }
-}
 
-@media (max-width: 768px) {
   /* Reset the 6-column grid to a simple 2-column grid for phones */
   .gallery-grid.count-5 {
     grid-template-columns: repeat(2, 1fr) !important;
